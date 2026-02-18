@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Stream MP4 Player",
+  "description": "A modern, high-performance MP4 video player with playlist support, sequential playback, and automatic looping.",
+  "requestFramePermissions": []
+}
