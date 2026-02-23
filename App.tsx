@@ -3,6 +3,7 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { VideoFile } from './types';
 import VideoPlayer from './components/VideoPlayer';
 import Playlist from './components/Playlist';
+import Clock from './components/Clock';
 import { PlusIcon, MenuIcon, CloseIcon } from './components/Icons';
 
 const App: React.FC = () => {
@@ -153,6 +154,10 @@ const App: React.FC = () => {
       >
         <MenuIcon />
       </button>
+
+      <div className={`fixed top-6 right-6 z-30 transition-all duration-300 ${!showControls && !isSidebarOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+        <Clock />
+      </div>
 
       {!isSidebarOpen && videos.length > 0 && showControls && (
         <div className="fixed bottom-6 left-6 z-30 bg-black/60 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/10 text-xs font-medium text-white/90 shadow-xl flex items-center gap-3">
